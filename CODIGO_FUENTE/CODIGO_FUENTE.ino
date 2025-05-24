@@ -19,8 +19,8 @@ void loop() {
 
 void girarMotor(int velocidad, bool sentidoHorario) {
   if (sentidoHorario) {
-    digitalWrite(pinIN1, HIGH);
-    digitalWrite(pinIN2, LOW);
+    digitalWrite(pinIN1, LOW);
+digitalWrite(pinIN2, HIGH); // Sentido antihorario
   } else {
     digitalWrite(pinIN1, LOW);
     digitalWrite(pinIN2, HIGH);
