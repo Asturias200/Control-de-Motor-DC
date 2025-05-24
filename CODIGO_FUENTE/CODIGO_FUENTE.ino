@@ -1,29 +1,20 @@
-const int pinIN1 = 8;
-const int pinIN2 = 9;
-const int pinENA = 10;
+const int pinIN3 = 7;  
+const int pinIN4 = 8;  
+const int pinENB = 9;  
 
 void setup() {
-  pinMode(pinIN1, OUTPUT);
-  pinMode(pinIN2, OUTPUT);
-  pinMode(pinENA, OUTPUT);
-
-  // Configuración por defecto
-  int velocidad = 128;         // Velocidad media
-  bool horario = true;         // Sentido horario
-
-  girarMotor(velocidad, horario);
+  pinMode(pinIN3, OUTPUT);
+  pinMode(pinIN4, OUTPUT);
+  pinMode(pinENB, OUTPUT);
 }
 
 void loop() {
-}
 
-void girarMotor(int velocidad, bool sentidoHorario) {
-  if (sentidoHorario) {
-    digitalWrite(pinIN1, LOW);
-digitalWrite(pinIN2, HIGH); // Sentido antihorario
-  } else {
-    digitalWrite(pinIN1, LOW);
-    digitalWrite(pinIN2, HIGH);
-  }
-  analogWrite(pinENA, velocidad);
+  digitalWrite(pinIN3, HIGH);
+  digitalWrite(pinIN4, LOW);
+  analogWrite(pinENB, 250);  
+  delay(5000);
+
+  digitalWrite(pinIN3, LOW);
+  digitalWrite(pinIN4, LOW);
 }
