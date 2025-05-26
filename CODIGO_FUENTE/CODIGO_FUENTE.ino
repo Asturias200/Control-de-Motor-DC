@@ -10,8 +10,8 @@ void setup() {
 
 void loop() {
 
-  digitalWrite(pinIN3, HIGH);
-  digitalWrite(pinIN4, LOW);
+  digitalWrite(pinIN3, LOW);
+  digitalWrite(pinIN4, HIGH);
   analogWrite(pinENB, 128);  
   delay(5000);
 
