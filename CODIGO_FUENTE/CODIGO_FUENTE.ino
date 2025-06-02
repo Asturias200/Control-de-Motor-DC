@@ -12,9 +12,9 @@ void loop() {
 
   digitalWrite(pinIN3, HIGH);
   digitalWrite(pinIN4, LOW);
-  analogWrite(pinENB, 128);  
+  analogWrite(pinENB, 100);  
   delay(5000);
-
+  
   digitalWrite(pinIN3, LOW);
   digitalWrite(pinIN4, LOW);
 }
